@@ -10,7 +10,7 @@
       "name": "board",
       "source": {
         "source": "git-subdir",
-        "url": "GDKeller/board",
+        "url": "https://github.com/GDKeller/board.git",
         "path": "plugin"
       },
       "displayName": "Board",

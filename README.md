@@ -28,7 +28,7 @@ claude plugin install board@gdkeller
 
 Add an entry to [`.claude-plugin/marketplace.json`](.claude-plugin/marketplace.json):
 
-- **Plugin in its own repo**: use a `git-subdir` source (or `github` if the plugin is the repo root).
+- **Plugin in its own repo**: use a `git-subdir` source (or `url` if the plugin is the repo root) with a full `https://` URL. An `owner/repo` shorthand clones over SSH, which fails for anyone without a GitHub SSH key.
 - **Small plugin kept here**: put it in `plugins/<name>/` and use a relative source, `"source": "./plugins/<name>"`.
 
 Keep `version` in the plugin's own `plugin.json`, not in the catalog entry. Then check the catalog:
