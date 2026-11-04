@@ -1,17 +1,21 @@
-# gdkeller Claude Code marketplace
+# Grant Keller's Claude Code Plugins
 
-Grant Keller's personal [Claude Code plugin marketplace](https://code.claude.com/docs/en/plugins/marketplace-reference.md). This repo is only the catalog. Each plugin lives in its own repo unless it's small enough to live here.
+Marketplace entry only, plugins live in their own repos.
 
 ## Install
 
 From inside Claude Code:
 
-```
+Use `/plugins`, navitage to `Marketplaces` and add `GDKeller/claude-marketplace`.
+
+Add marketplace/plugin directly:
+
+```text
 /plugin marketplace add GDKeller/claude-marketplace
 /plugin install board@gdkeller
 ```
 
-Or from your shell:
+Install marketplace/plugin from your shell:
 
 ```bash
 claude plugin marketplace add GDKeller/claude-marketplace
@@ -22,17 +26,4 @@ claude plugin install board@gdkeller
 
 | Plugin | Description | Source |
 |---|---|---|
-| `board` | Plain-text project management board for human-AI collaboration: tasks, epics, ADRs, notes, and references as Markdown files with YAML frontmatter | [GDKeller/board](https://github.com/GDKeller/board) (`plugin/`) |
-
-## Adding a plugin
-
-Add an entry to [`.claude-plugin/marketplace.json`](.claude-plugin/marketplace.json):
-
-- **Plugin in its own repo**: use a `git-subdir` source (or `url` if the plugin is the repo root) with a full `https://` URL. An `owner/repo` shorthand clones over SSH, which fails for anyone without a GitHub SSH key.
-- **Small plugin kept here**: put it in `plugins/<name>/` and use a relative source, `"source": "./plugins/<name>"`.
-
-Keep `version` in the plugin's own `plugin.json`, not in the catalog entry. Then check the catalog:
-
-```bash
-claude plugin validate .
-```
+| `board` | Plain-text project management board for human-AI collaboration| [GDKeller/board](https://github.com/GDKeller/board) |
